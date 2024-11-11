@@ -13,10 +13,15 @@
 \def\@copyrightyear{\number\year}
 \def\adviser#1{\gdef\@adviser{#1}}
 \long\def\@abstract{\@latex@error{No \noexpand\abstract given}\@ehc}
+
+%% nov 2024 update: roman numerals no longer required for front matter of dissertation, and the abstract page should have arabic number 3, and all pages should have arabic numbers running consecutively to the end of the thesis
 \newcommand*{\frontmatter}{
-  \pagenumbering{roman}
+  % \pagenumbering{roman}
   }
-\newcommand*{\mainmatter}{\pagenumbering{arabic}}
+\newcommand*{\mainmatter}{
+% \pagenumbering{arabic}
+}
+
 \newcommand*{\makelot}{}
 \newcommand*{\makelof}{}
 \newcommand*{\makelos}{}

@@ -3,15 +3,20 @@
 % Adapted from: http://www.math.princeton.edu/graduate/tex/puthesis.html
 % ****************************************************************************************** %
 
+%% Modified by August Ning, Nov 2024
+
 
 %%% For print copies
 %% set 'singlespace' option to set entire thesis to single space, and define "\printmode" to remove all hyperlinks for printed copies of the thesis. Delete all output files before changing this mode -- it will turn hyperref package on and off
-%\documentclass[12pt,lot, lof, singlespace]{puthesis}
-%\newcommand{\printmode}{}
+% \documentclass[12pt,lot, lof, singlespace]{puthesis}
+% \newcommand{\printmode}{}
 
-%%% For the electronic copy, use doublespacing, define "\proquestmode" to use outlined links, instead of colored links. 
+%%% For the electronic copy, use doublespacing, define "\proquestmode" to use outlined links, instead of colored links.
+
 \documentclass[12pt,lot, lof]{puthesis}
 \newcommand{\proquestmode}{}
+% \newcommand{\printmode}{}
+
 % I prefer proquestmode to be off for electronic copies for normal use, since the colored links are less distracting. However when printed in black and white, the colored links are difficult to read. 
 
 %%% For early drafts without some of the frontmatter
@@ -21,14 +26,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
 %%%% Author & title page info
 
-\title{Dissertation Template for Princeton University}
+%% 2024 update, based on this google doc
+% https://docs.google.com/document/d/14aowaIfFxouwdpDj7ILqNnC1A8qQ5ZDeaOboo1jMA3k/edit?tab=t.0
 
-\submitted{June 2010}  % degree conferral date (January, April, June, September, or November)
-\copyrightyear{2010}  % year in which the copyright is secured by publication of the dissertation.
-\author{First Middle Last}
+\title{Title of Doctoral Dissertation [or Master's Thesis]}
+
+\submitted{May 2024}  % degree conferral date (January, April, June, September, or November)
+\copyrightyear{2024}  % year in which the copyright is secured by publication of the dissertation.
+\author{Legal Name of Author}
 \adviser{Professor Smith}  %replace with the full name of your adviser
 %\departmentprefix{Program in}  % defaults to "Department of", but programs need to change this.
-\department{Electrical Engineering}
+\department{Electrical and Computer Engineering}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
 %%%% Tweak float placements
@@ -81,7 +89,8 @@
 % default caption width is 4in for longtable, but wider for normal tables
 \setlength{\LTcapwidth}{\textwidth}
 
-
+% 2024 addition
+\usepackage{xcolor}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Printed vs. online formatting
@@ -194,7 +203,7 @@
 \input{acknowledgements}
 }
 
-\dedication{To my parents.}
+\dedication{To my family.}
 
 \fi  % disable frontmatter
 
@@ -250,7 +259,7 @@
 \addcontentsline{toc}{chapter}{Bibliography}
 
 % include your .bib file
-\bibliography{thesis}
+\bibliography{refs}
 
 \end{document}
 
